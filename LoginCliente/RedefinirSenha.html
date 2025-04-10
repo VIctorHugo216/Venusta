@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Recuperar Senha</h2>
+        <form action="RedefinirSenha.php" method="POST">
+            <label for="nova_senha">Nova senha:</label>
+            <input type="password" name="nova_senha" required>
+            
+            <label for="confirmar_senha">Confirme a nova senha:</label>
+            <input type="password" name="confirmar_senha" required>
+            
+            <input type="hidden" name="email" value="<?php echo $_GET['email']; ?>" />
+        
+            <button type="submit">Redefinir Senha</button>
+        </form>
+    </div>
+</body>
+</html>

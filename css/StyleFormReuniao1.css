@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c4e4fd;
+    margin: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 2rem;
+    background-color: #f7f1df;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.form-header h1 {
+    font-size: 1.8rem;
+    color: #333;
+    position: relative;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #025492;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+.input-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.input-box input {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-box input:focus {
+    outline: none;
+    border-color: #025492;
+}
+
+/* Alinhamento de campos lado a lado */
+.inline-group {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+}
+
+.inline-group .input-box {
+    flex: 1;
+}
+
+/* Alinhamento dos botões */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.continue-button button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #025492;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.continue-button button:hover {
+    background-color: #6e9277;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .inline-group {
+        flex-direction: column;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+}

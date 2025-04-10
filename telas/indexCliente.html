@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Venusta Arquitetura</title> 
+        <link rel="stylesheet" href="../css/style1.css"> 
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll(".about");
+
+                const observer = new IntersectionObserver(
+                        (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("section-visible");
+                            observer.unobserve(entry.target); // Remove a observação após a animação
+                        }
+                    });
+                },
+                        {threshold: 0.1} // Inicia a animação quando 10% da seção aparece
+                );
+
+                sections.forEach((section) => {
+                    section.classList.add("section-hidden"); // Adiciona a classe inicial
+                    observer.observe(section);
+                });
+            });
+        </script>
+
+    </head> 
+    <body> <!-- Menu de Navegação --> 
+        <header> 
+            <nav class="navbar"> 
+                <div class="logo">
+                    <img src="../img/logo3.png" alt="Logo da Empresa">
+                </div>
+                <ul> 
+                    <li><a href="indexCliente.html">Home</a></li>
+                    <li><a href="../Meus Dados/FormConsultarCliente.php">Meus Dados</a></li>
+                    <li><a href="../ReuniaoCliente/FormCadastraReuniao.php">Reunião</a></li>
+                    <li><a href="../telas/indexPortfolioCliente.html">Portfólio</a></li>
+                    <li><a href="../Contato/FormCadastrarContato.php">Contato</a></li> 
+                </ul> 
+            </nav> 
+        </header> <!-- Primeira Seção --> 
+        <section id="home" class="hero"> 
+            <div class="hero-content"> 
+                <h1>Do conceito à execução, cada detalhe faz a diferença.</h1> 
+            </div> 
+        </section> <!-- Segunda Seção --> 
+
+        <section id="servicos" class="services">
+            <div class="container">
+                <div class="service-item">
+                    <img src="../img/servico1.jpg" alt="Projeto Arquitetônico">
+                    <h3>Projeto Arquitetônico</h3>
+                    <p>Projetos que atendem todas as suas necessidades: arquitetura, 
+                        paisagismo, luminotécnica e elétrica para transformar seu espaço.</p>
+                </div>
+                <div class="service-item">
+                    <img src="../img/servico2.jpg" alt="Gestão de Obras">
+                    <h3>Gestão de Obras</h3>
+                    <p>Planejamento e acompanhamento integral da sua obra com uma equipe especializada, 
+                        garantindo o controle de custos, prazos e qualidade em cada etapa.</p>
+                </div>
+                <div class="service-item">
+                    <img src="../img/servico3.jpg" alt="Consultoria">
+                    <h3>Consultoria</h3>
+                    <p>Consultoria especializada para orientar cada fase do seu projeto, oferecendo soluções estratégicas que asseguram eficiência,
+                        viabilidade e excelência otimizando recursos e alcançando os melhores resultados.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="sobre" class="about"> 
+            <div class="about-text"> 
+                <h2>SOBRE NÓS</h2>
+                <p>Nós somos a Venusta Arquitetura, uma sociedade formada por três arquitetos apaixonados por transformar espaços e criar soluções inovadoras. 
+                    Buscamos sempre a excelência em cada projeto, seja ele residencial, comercial ou urbano.
+                    Nossa missão é criar espaços que inspirem e transformem a vida das pessoas, com foco em funcionalidade, estética e qualidade.</p>   
+            </div>
+            <div class="about-image">
+                <img src="../img/sobre.jpg" alt="Sobre">   
+            </div>
+        </section> 
+
+        <section id="equipe" class="team">
+            <h2>Nossa Equipe</h2>
+            <div class="team-container">
+                <div class="team-member">
+                    <img src="../img/arquiteto1.jpg" alt="Arquiteto Chefe">
+                    <h3>Arquiteto e Co-fundador</h3>
+                    <p>Responsável por liderar e supervisionar todos os projetos, garantindo excelência e criatividade em cada detalhe.</p>
+                </div>
+                <div class="team-member">
+                    <img src="../img/arquiteto2.jpg" alt="Designer de Interiores">
+                    <h3>Arquiteta e Co-fundadora</h3>
+                    <p>Responsável por transformar ideias em soluções funcionais e esteticamente marcantes, garantindo que cada espaço reflita a identidade e os sonhos dos clientes</p>
+                </div>
+                <div class="team-member">
+                    <img src="../img/arquiteto3.jpg" alt="Engenheiro de Obras">
+                    <h3>Arquiteto e Co-fundador</h3>
+                    <p>Responsável por coordenar e executar todas as etapas do projeto, garantindo qualidade e eficiência.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="contact">
+            <h2>Entre em Contato</h2>
+            <div class="contact-container">
+                <!-- Localização -->
+                <div class="contact-info">
+                    <h3>Localização</h3>
+                    <p>Setor Comercial Sul<br>Senac Jessé Freire</p>
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3834.4585661281916!2d-47.890214584486166!3d-15.796381289058714!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935a3ae1733556d1%3A0x6cfa3d5804b894a8!2sSetor%20Comercial%20Sul%20Q.%206%20-%20Asa%20Sul%2C%20Bras%C3%ADlia%20-%20DF%2C%2070325-900!5e0!3m2!1spt-BR!2sbr!4v1696358301974!5m2!1spt-BR!2sbr" 
+                        width="100%" 
+                        height="200" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+                <!-- Instagram -->
+                <div class="contact-info">
+                    <h3>Instagram</h3>
+                    <p>Siga-nos no Instagram:</p>
+                    <a href="https://instagram.com/VenustaArquitetura" target="_blank">@VenustaArquitetura</a>
+                </div>
+                <!-- WhatsApp -->
+                <div class="contact-info">
+                    <h3>WhatsApp</h3>
+                    <p>Entre em contato:</p>
+                    <a href="https://wa.me/559999999999" target="_blank">(61) 9 9999-9999</a>
+                </div>
+            </div>
+        </section>
+
+
+
+    </body> 
+</html>

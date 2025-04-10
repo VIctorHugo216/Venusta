@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfólio - Venusta Arquitetura</title>
+        <link rel="stylesheet" href="../css/stylePortfolioo.css">
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const sections = document.querySelectorAll(".about");
+
+                const observer = new IntersectionObserver(
+                        (entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("section-visible");
+                            observer.unobserve(entry.target); // Remove a observação após a animação
+                        }
+                    });
+                },
+                        {threshold: 0.1} // Inicia a animação quando 10% da seção aparece
+                );
+
+                sections.forEach((section) => {
+                    section.classList.add("section-hidden"); // Adiciona a classe inicial
+                    observer.observe(section);
+                });
+            });
+        </script>
+
+    </head>
+
+    <body> <!-- Menu de Navegação --> 
+        <header> 
+            <nav class="navbar"> 
+                <div class="logo">
+                    <img src="../img/logo3.png" alt="Logo da Empresa">
+                </div>
+                <ul> 
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="Clientes/FormCadastrarCliente.php">Cadastrar</a></li>
+                    <li><a href="Login/FormLogin.html">Login</a></li>
+                    <li><a href="Login/FormLogin.html">Contato</a></li>
+                    <li><a href="../telas/indexPortfolioGeral.html">Portfólio</a></li>
+                </ul> 
+            </nav> 
+        </header>
+
+        <!-- Portfólio -->
+        <main id="portfolio">
+            <h1>Portfólio de Projetos</h1>
+
+            <section id="portfolio" class="portfolio">
+                <h2>Estilo clássico</h2>
+                <p>Este projeto de casa clássica foi idealizado para oferecer um ambiente
+                    sofisticado e atemporal, com ênfase em elementos tradicionais da arquitetura, <br>
+                    como simetria, proporções equilibradas e uso de materiais nobres.
+                    O design é pensado para integrar funcionalidade, conforto e estética, <br>
+                    criando um espaço que une o melhor da tradição e modernidade.</p>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item large">
+                        <img src="../img/projeto1.jpg" alt="Projeto 1" style="height: 700px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto1-1.jpg" alt="Projeto 2">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto1-2.jpg" alt="Projeto 3">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto1-3.jpg" alt="Projeto 4" style="height: 420px">
+                    </div>
+                    <div class="portfolio-item medium">
+                        <img src="../img/projeto1-4.jpg" alt="Projeto 5" style="height: 420px">
+                    </div>
+                </div>
+            </section>
+
+            <hr class="portfolio-divider"> 
+
+            <section id="portfolio" class="portfolio">
+                <h2>Estilo moderno</h2>
+                <p>Esta casa de estilo moderno é marcada por linhas retas, volumes 
+                    geométricos <br> e uma estética minimalista, com ênfase na funcionalidade e 
+                    simplicidade. O uso de materiais como concreto, aço e madeira natural <br>
+                    cria um equilíbrio entre o urbano e o acolhedor. </p>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item large">
+                        <img src="../img/projeto2-1.jpg" alt="Projeto 1" style="height: 400px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto2-3.jpg" alt="Projeto 2">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto2-2.jpg" alt="Projeto 3">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto2-4.jpg" alt="Projeto 4" style="height: 330px" >
+                    </div>
+                    <div class="portfolio-item medium">
+                        <img src="../img/projeto2.jpg" alt="Projeto 5">
+                    </div>
+                </div>
+            </section>
+
+            <hr class="portfolio-divider"> 
+
+            <section id="portfolio" class="portfolio">
+                <h2>Estilo mediterrêneo</h2>
+                <p>Esta casa de estilo mediterrâneo exibe uma arquitetura encantadora e acolhedora, 
+                    com uma fachada composta por paredes de tons quentes, <br>
+                    telhados de cerâmica e arcos elegantes. A combinação de 
+                    texturas naturais, como pedra e madeira, confere um charme rústico e 
+                    sofisticado. <br> O interior é caracterizado por espaços amplos, com piso de 
+                    terracota, janelas amplas e varandas que oferecem vistas deslumbrantes. </p>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto3-1.jpg" alt="Projeto 1" >
+                    </div>
+                    <div class="portfolio-item medium">
+                        <img src="../img/projeto3-2.jpg" alt="Projeto 2" style="height: 380px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto3-3.jpg" alt="Projeto 5">
+                    </div>
+                    <div class="portfolio-item medium">
+                        <img src="../img/projeto3.jpg" alt="Projeto 5" style="height: 380px">
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="portfolio-divider"> 
+
+            <section id="portfolio" class="portfolio">
+                <h2>Estilo americano</h2>
+                <p>Esta casa de estilo americano apresenta uma fachada imponente com telhados de 
+                  duas águas e detalhes arquitetônicos tradicionais, como <br> janelas com persianas e 
+                  varandas. Internamente, os ambientes são espaçosos, com uma planta aberta que conecta 
+                  a sala de estar, jantar e  <br> cozinha, promovendo uma sensação de acolhimento e 
+                  funcionalidade.  </p>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item medium">
+                        <img src="../img/projeto4.jpg" alt="Projeto 1" style="height: 380px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto4-1.jpg" alt="Projeto 2" style="height: 380px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto4-2.jpg" alt="Projeto 5" style="height: 380px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto4-3.jpg" alt="Projeto 5" style="height: 380px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto4-4.jpg" alt="Projeto 5" style="height: 380px">
+                    </div>
+                </div>
+            </section>
+            
+            <hr class="portfolio-divider"> 
+
+            <section id="portfolio" class="portfolio">
+                <h2>Estilo sustentável</h2>
+                <p>Esta casa de estilo sustentável é projetada para minimizar o impacto ambiental, utilizando materiais ecológicos e soluções inovadoras <br> 
+                    para reduzir o consumo de energia. A fachada é simples e integrada ao ambiente natural, com o uso de madeira reciclada, painéis solares no <br> 
+                    telhado e sistemas de captação de água da chuva. O interior destaca-se por amplas janelas que garantem iluminação natural e ventilação <br> 
+                    cruzada, reduzindo a necessidade de iluminação artificial e climatização. </p>
+
+                <div class="portfolio-grid">
+                    <div class="portfolio-item large">
+                        <img src="../img/projeto5.jpg" alt="Projeto 1"  style="height: 690px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto5-1.jpg" alt="Projeto 2" style="height: 335px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto5-2.jpg" alt="Projeto 5" style="height: 335px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto5-3.jpg" alt="Projeto 5" style="height: 370px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto5-4.jpg" alt="Projeto 5" style="height: 370px">
+                    </div>
+                    <div class="portfolio-item small">
+                        <img src="../img/projeto5-5.jpg" alt="Projeto 5" style="height: 370px">
+                    </div>
+                </div>
+            </section>
+            
+    </body>
+</html>

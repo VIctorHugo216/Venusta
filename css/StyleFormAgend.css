@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #c4e4fd;
+}
+
+
+
+.form {
+    width: 25%;
+    display: flex;
+    height: 680px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(247, 241, 223);
+    padding: 3rem;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-button {
+    display: flex;
+    align-items: center;
+}
+
+.login-button button {
+    border: none;
+    background-color: #025492;
+    padding: 0.4rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-button button:hover {
+    background-color: #6e9277;
+}
+
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #025492;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: #f8f8f8;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #025492;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.descricao{
+    width: 10%;
+}
+.continue-button{
+    display: flex;
+    justify-content: space-between;
+}
+
+.continue-button button {
+    width: 45%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #025492;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.continue-button button:hover {
+    background-color: #6e9277;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
+}
+
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+   
+    .form {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .form {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: wrap;
+    }
+    
+}
